@@ -4,13 +4,13 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        title: ['Poppins'],
-        body: ['Platypi'],
+        title: ['Platypi'],
+        body: ['Poppins'],
       },
-      
-      // backgroundImage: {
-      //   parallax: 'url("public/img/test_bg_img.jpg")',
-      // }
+
+      backgroundImage: {
+        'parallax': 'url("../public/img/test_bg_img.jpg")',
+      }
     },
   },
   plugins: [],
