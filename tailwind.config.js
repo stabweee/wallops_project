@@ -7,6 +7,10 @@ module.exports = {
         title: ['Platypi'],
         body: ['Poppins'],
       },
+
+      backgroundImage: {
+        'parallax': 'url("../img/test_bg_img.jpg")',
+      }
     },
   },
   plugins: [],
