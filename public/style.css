@@ -78,10 +78,6 @@ body {
 3. Ensure horizontal rules are visible by default.
 */
 
-.bg-parallax {
-  background-image: url("../img/test_bg_img.jpg");
-}  
-
 hr {
   height: 0;
   /* 1 */
