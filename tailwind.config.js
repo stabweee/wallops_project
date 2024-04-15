@@ -8,9 +8,9 @@ module.exports = {
         body: ['Platypi'],
       },
       
-      backgroundImage: {
-        parallax: 'url("public/img/test_bg_img.jpg")',
-      }
+      // backgroundImage: {
+      //   parallax: 'url("public/img/test_bg_img.jpg")',
+      // }
     },
   },
   plugins: [],
