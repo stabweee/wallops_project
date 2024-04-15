@@ -70,7 +70,7 @@ body {
   /* 1 */
   line-height: inherit;
   /* 2 */
-  background-image: url("../public/img/test_bg_img.jpg");
+  background-image: url("~/public/img/test_bg_img.jpg");
 }
 
 /*
