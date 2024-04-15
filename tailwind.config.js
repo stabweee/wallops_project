@@ -9,7 +9,7 @@ module.exports = {
       },
 
       backgroundImage: {
-        'parallax': 'url("../img/test_bg_img.jpg")',
+        'parallax': 'url("/public/img/test_bg_img.jpg")',
       }
     },
   },
