@@ -4,10 +4,10 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        title: ['Platypi'],
+        title: ['Poppins'],
         body: ['Poppins'],
       },
-
+      
       backgroundImage: {
         parallax: 'url("public/img/test_bg_img.jpg")',
       }
