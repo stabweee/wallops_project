@@ -8,13 +8,14 @@
     <link rel="stylesheet" href="style.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
+
 <body class="text-gray-700 font-body">
     
     <div> <!-- content wrapper -->
         <div>
             <nav>
                 <div class="flex justify-center items-center bg-fixed bg-cover h-screen" style='background-image: URL("img/test_bg_img.jpg")'>
-                    <div class="border-4 border-black h-fit" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+                    <div class="border-4 border-black h-fit" id="title">
                         <h1 class="text-4xl md:text-6xl font-bold font-title uppercase text-black p-4">
                             <a href="index.html">Wallops Island</a>
                         </h1>
@@ -114,10 +115,13 @@
                 </a>
             </div>
         </main>
-
     </div>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>AOS.init();</script>
+    <script src="https://unpkg.com/split-type"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
