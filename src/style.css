@@ -6,7 +6,7 @@
 @tailwind utilities;
 
 .card {
-    @apply bg-white rounded overflow-hidden shadow-md relative cursor-pointer hover:scale-90 transition-all size-96;
+    @apply bg-white rounded overflow-hidden shadow-md relative cursor-pointer hover:scale-90 transition-all size-64 md:size-80 xl:size-96;
 }
 
 .cardtext {
