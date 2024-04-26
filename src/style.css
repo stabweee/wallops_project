@@ -6,13 +6,53 @@
 @tailwind utilities;
 
 .card {
-    @apply bg-white rounded overflow-hidden shadow-md relative cursor-pointer hover:scale-90 transition-all size-64 md:size-80 xl:size-96;
+    @apply bg-white rounded overflow-hidden shadow-md relative cursor-pointer hover:scale-90 transition-all size-52 sm:size-64 md:size-80 lg:size-96;
 }
 
 .cardtext {
-    @apply flex text-2xl justify-center text-white absolute bottom-0 ml-3 mb-3;
+    @apply flex text-2xl justify-center text-white font-bold absolute bottom-0 ml-3 mb-3;
 }
 
 .badge {
-    @apply bg-slate-500 text-white uppercase font-bold rounded-full p-2 absolute top-0 ml-2 mt-2;
+    @apply bg-slate-500 text-white uppercase rounded-full p-2 absolute top-0 ml-2 mt-2;
+}
+
+.img {
+    @apply hover:scale-110 transition-all cursor-pointer;
+}
+
+.gallery {
+    @apply columns-1 gap-2 lg:gap-4 sm:columns-2 lg:columns-3;
+}
+.gallery-div {
+    @apply overflow-hidden object-cover shadow-xl mb-4 rounded-md;
+}
+.gallery span {
+    @apply absolute top-0 invisible;
+}
+
+.full-img {
+    @apply fixed h-screen w-full;
+    background: rgba(0,0,0,0.9);
+    z-index: 50;
+}
+.full-img img {
+    @apply absolute top-1/2 left-1/2 h-5/6 w-auto rounded-md object-cover;
+    transform: translate(-50%, -50%);
+}
+.full-img span {
+    @apply absolute top-5 right-1.5 text-white cursor-pointer;
+    font-size: 60px;
+    font-weight: bolder;
+    z-index: 50;
+}
+
+.invisible {
+    @apply hidden;
+}
+.invisible img {
+    @apply hidden;
+}
+.invisible span {
+    @apply hidden;
 }
