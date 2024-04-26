@@ -50,9 +50,3 @@
 .invisible {
     @apply hidden;
 }
-.invisible img {
-    @apply hidden;
-}
-.invisible span {
-    @apply hidden;
-}
