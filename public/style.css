@@ -578,8 +578,8 @@ video {
   margin: 2rem;
 }
 
-.mt-8{
-  margin-top: 2rem;
+.mt-10{
+  margin-top: 2.5rem;
 }
 
 .inline-block{
@@ -594,6 +594,10 @@ video {
   display: grid;
 }
 
+.h-24{
+  height: 6rem;
+}
+
 .h-6{
   height: 1.5rem;
 }
@@ -603,16 +607,8 @@ video {
   height: fit-content;
 }
 
-.h-full{
-  height: 100%;
-}
-
 .h-screen{
   height: 100vh;
-}
-
-.h-24{
-  height: 6rem;
 }
 
 .w-5{
@@ -621,6 +617,11 @@ video {
 
 .w-6{
   width: 1.5rem;
+}
+
+.w-fit{
+  width: -moz-fit-content;
+  width: fit-content;
 }
 
 .w-full{
@@ -633,10 +634,6 @@ video {
 
 .justify-center{
   justify-content: center;
-}
-
-.justify-items-center{
-  justify-items: center;
 }
 
 .gap-10{
@@ -672,11 +669,6 @@ video {
 
 .bg-fixed{
   background-attachment: fixed;
-}
-
-.object-cover{
-  -o-object-fit: cover;
-     object-fit: cover;
 }
 
 .p-32{
@@ -734,6 +726,11 @@ video {
   line-height: 1;
 }
 
+.text-3xl{
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+}
+
 .font-bold{
   font-weight: 700;
 }
@@ -764,25 +761,18 @@ video {
 
 .card{
   position: relative;
+  margin-left: 6rem;
+  margin-right: 6rem;
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
   width: 13rem;
   height: 13rem;
   cursor: pointer;
   overflow: hidden;
   border-radius: 0.25rem;
-  --tw-bg-opacity: 1;
-  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
   --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
   --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-  transition-property: all;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 150ms;
-}
-
-.card:hover{
-  --tw-scale-x: .9;
-  --tw-scale-y: .9;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
 @media (min-width: 640px){
@@ -806,6 +796,22 @@ video {
   }
 }
 
+.card img{
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.card img:hover{
+  --tw-scale-x: 1.1;
+  --tw-scale-y: 1.1;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
 .cardtext{
   position: absolute;
   bottom: 0px;
@@ -813,11 +819,24 @@ video {
   margin-bottom: 0.75rem;
   display: flex;
   justify-content: center;
-  font-size: 1.5rem;
-  line-height: 2rem;
-  font-weight: 700;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+@media (min-width: 640px){
+  .cardtext{
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+}
+
+@media (min-width: 1024px){
+  .cardtext{
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+  }
 }
 
 .badge{
@@ -865,6 +884,13 @@ video {
     -moz-columns: 3;
          columns: 3;
     gap: 1rem;
+  }
+}
+
+@media (min-width: 1280px){
+  .gallery{
+    -moz-columns: 4;
+         columns: 4;
   }
 }
 
@@ -947,8 +973,16 @@ video {
 }
 
 @media (min-width: 1280px){
+  .xl\:mt-48{
+    margin-top: 12rem;
+  }
+
   .xl\:grid-cols-2{
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .xl\:gap-48{
+    gap: 12rem;
   }
 }
 
