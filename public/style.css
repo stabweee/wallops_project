@@ -578,10 +578,6 @@ video {
   margin: 2rem;
 }
 
-.mt-10{
-  margin-top: 2.5rem;
-}
-
 .inline-block{
   display: inline-block;
 }
@@ -605,10 +601,6 @@ video {
 .h-fit{
   height: -moz-fit-content;
   height: fit-content;
-}
-
-.h-screen{
-  height: 100vh;
 }
 
 .w-5{
@@ -636,10 +628,6 @@ video {
   justify-content: center;
 }
 
-.gap-10{
-  gap: 2.5rem;
-}
-
 .border-4{
   border-width: 4px;
 }
@@ -653,22 +641,9 @@ video {
   border-color: rgb(255 255 255 / var(--tw-border-opacity));
 }
 
-.bg-gray-100{
-  --tw-bg-opacity: 1;
-  background-color: rgb(243 244 246 / var(--tw-bg-opacity));
-}
-
 .bg-slate-200{
   --tw-bg-opacity: 1;
   background-color: rgb(226 232 240 / var(--tw-bg-opacity));
-}
-
-.bg-cover{
-  background-size: cover;
-}
-
-.bg-fixed{
-  background-attachment: fixed;
 }
 
 .p-32{
@@ -683,11 +658,6 @@ video {
   padding: 1.25rem;
 }
 
-.px-10{
-  padding-left: 2.5rem;
-  padding-right: 2.5rem;
-}
-
 .px-48{
   padding-left: 12rem;
   padding-right: 12rem;
@@ -696,11 +666,6 @@ video {
 .py-20{
   padding-top: 5rem;
   padding-bottom: 5rem;
-}
-
-.py-6{
-  padding-top: 1.5rem;
-  padding-bottom: 1.5rem;
 }
 
 .font-body{
@@ -724,11 +689,6 @@ video {
 .text-6xl{
   font-size: 3.75rem;
   line-height: 1;
-}
-
-.text-3xl{
-  font-size: 1.875rem;
-  line-height: 2.25rem;
 }
 
 .font-bold{
@@ -759,41 +719,50 @@ video {
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
+.hero{
+  background-size: cover;
+  background-attachment: fixed;
+  background-image: URL("img/home-bg.jpg");
+  height:110vh;
+}
+
+.slide{
+  display: flex;
+  width: 100vw;
+  align-items: center;
+  justify-content: flex-end;
+  border-width: 8px;
+  --tw-bg-opacity: 1;
+  background-color: rgb(241 245 249 / var(--tw-bg-opacity));
+  z-index: 100;
+  height: 150vh;
+}
+
+.slide-text-div{
+  display: flex;
+  width: 50%;
+  justify-content: center;
+}
+
+.slide-text{
+  font-size: 3.75rem;
+  line-height: 1;
+}
+
 .card{
   position: relative;
   margin-left: 6rem;
   margin-right: 6rem;
   margin-top: 2.5rem;
   margin-bottom: 2.5rem;
-  width: 13rem;
-  height: 13rem;
   cursor: pointer;
   overflow: hidden;
   border-radius: 0.25rem;
   --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
   --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-}
-
-@media (min-width: 640px){
-  .card{
-    width: 16rem;
-    height: 16rem;
-  }
-}
-
-@media (min-width: 768px){
-  .card{
-    width: 20rem;
-    height: 20rem;
-  }
-}
-
-@media (min-width: 1024px){
-  .card{
-    width: 24rem;
-    height: 24rem;
-  }
+  width: 40vw;
+  height: 40vw;
 }
 
 .card img{
@@ -836,6 +805,13 @@ video {
   .cardtext{
     font-size: 2.25rem;
     line-height: 2.5rem;
+  }
+}
+
+@media (min-width: 1280px){
+  .cardtext{
+    font-size: 3.75rem;
+    line-height: 1;
   }
 }
 
@@ -948,12 +924,18 @@ video {
   display: none;
 }
 
-@media (min-width: 640px){
-  .sm\:px-32{
-    padding-left: 8rem;
-    padding-right: 8rem;
-  }
+.footer{
+  display: flex;
+  height: 6rem;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  --tw-text-opacity: 1;
+  color: rgb(71 85 105 / var(--tw-text-opacity));
+}
 
+@media (min-width: 640px){
   .sm\:text-4xl{
     font-size: 2.25rem;
     line-height: 2.5rem;
@@ -961,11 +943,6 @@ video {
 }
 
 @media (min-width: 1024px){
-  .lg\:px-52{
-    padding-left: 13rem;
-    padding-right: 13rem;
-  }
-
   .lg\:text-8xl{
     font-size: 6rem;
     line-height: 1;
@@ -973,22 +950,7 @@ video {
 }
 
 @media (min-width: 1280px){
-  .xl\:mt-48{
-    margin-top: 12rem;
-  }
-
   .xl\:grid-cols-2{
     grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .xl\:gap-48{
-    gap: 12rem;
-  }
-}
-
-@media (min-width: 1536px){
-  .\32xl\:px-44{
-    padding-left: 11rem;
-    padding-right: 11rem;
   }
 }
