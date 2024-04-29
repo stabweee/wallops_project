@@ -16,72 +16,21 @@ gsap.from(".char", {
 });
 
 const body = document.getElementById('body');
-
-gsap.to(body, {
-    y: -window.innerHeight,
-    ease: "power3.out",
-    scrollTrigger: {
-        trigger: '#slide1',
-        start: "top bottom",
-        end: "top top",
-        scrub: true,
-    }
-});
-gsap.to(body, {
-    y: -window.innerHeight,
-    ease: "power3.out",
-    scrollTrigger: {
-        trigger: '#slide2',
-        start: "top bottom",
-        end: "top top",
-        scrub: true,
-    }
-});
-gsap.to(body, {
-    y: -window.innerHeight,
-    ease: "power3.out",
-    scrollTrigger: {
-        trigger: '#slide3',
-        start: "top bottom",
-        end: "top top",
-        scrub: true,
-    }
-});
-gsap.to(body, {
-    y: -window.innerHeight,
-    ease: "power3.out",
-    scrollTrigger: {
-        trigger: '#slide4',
-        start: "top bottom",
-        end: "top top",
-        scrub: true,
-    }
-});
-gsap.to(body, {
-    y: -window.innerHeight,
-    ease: "power3.out",
-    scrollTrigger: {
-        trigger: '#slide5',
-        start: "top bottom",
-        end: "top top",
-        scrub: true,
-    }
-});
-
-// slides.forEach((slide) => {
-//     const tl = gsap.timeline({
-//         scrollTrigger: {
-//             trigger: slide,
-//             start: "top bottom",
-//             end: "top top",
-//             scrub: true,
-//         }
-//     });
-//     tl.to(body, {
-//         y: -window.innerHeight,
-//         ease: "power3.out",
-//     });
-// })
+const slides = gsap.utils.toArray('.slide')
+slides.forEach((slide) => {
+    gsap.fromTo(body, {
+        y: window.innerHeight,
+    }, {
+        y: 0.5*window.innerHeight,
+        scrollTrigger: {
+            trigger: slide,
+            start: "top bottom",
+            end: "top 85%",
+            scrub: true,
+            markers: true,
+        }
+    });
+})
 
 // smooth scroll
 const lenis = new Lenis()
