@@ -8,16 +8,19 @@
 .hero {
     @apply bg-fixed bg-cover;
     background-image: URL("img/home-bg.jpg");
-    height:110vh;
+    height:100vh;
+    z-index: 0;
 }
 
 .slide {
-    @apply w-screen flex justify-end items-center border border-black bg-slate-100;
+    @apply flex justify-end items-center border border-black bg-slate-100;
     z-index: 100;
-    height: 150vh;
+    width: 100vw;
+    height: 100vh;
 }
 .slide-text-div {
-    @apply flex justify-center w-1/2;
+    @apply flex justify-center items-center w-1/2;
+    height: 40vw;
 }
 .slide-text {
     @apply text-6xl;

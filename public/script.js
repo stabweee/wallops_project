@@ -1,4 +1,4 @@
-gsap.registerPlugin(ScrollTrigger)
+gsap.registerPlugin(ScrollToPlugin)
 
 const t = gsap.timeline()
 const split = new SplitType("#title")
@@ -15,19 +15,48 @@ gsap.from(".char", {
     opacity: 0,
 });
 
+// const body = document.getElementById('body');
+// const slides = gsap.utils.toArray('.slide')
+// slides.forEach((slide) => {
+//     var tl = gsap.timeline();
+//     tl.to(body, {
+//         y: -window.innerHeight,
+//         scrollTrigger: {
+//             trigger: slide,
+//             start: "top bottom",
+//             end: "top 85%",
+//             scrub: true,
+//             markers: true,
+//         }
+//     });
+// });
+
+
 const body = document.getElementById('body');
-const slides = gsap.utils.toArray('.slide')
+const slides = gsap.utils.toArray('.slide');
+document.querySelector('.hero').addEventListener('click', function() {
+    gsap.to(window, {
+        scrollTo: window.innerHeight,
+        duration: 1,
+        ease: 'expo',
+    })
+});
+
 slides.forEach((slide) => {
-    gsap.fromTo(body, {
-        y: window.innerHeight,
-    }, {
-        y: 0.5*window.innerHeight,
-        scrollTrigger: {
-            trigger: slide,
-            start: "top bottom",
-            end: "top 85%",
-            scrub: true,
-            markers: true,
+    slide.addEventListener('click', function(event) {
+        let middle = window.innerHeight / 2;
+        if (event.clientY > middle) {
+            gsap.to(window, {
+                scrollTo: (slides.indexOf(slide) + 2)*window.innerHeight,
+                duration: 1,
+                ease: 'expo',
+            });
+        } else {
+            gsap.to(window, {
+                scrollTo: slides.indexOf(slide)*window.innerHeight,
+                duration: 1,
+                ease: 'expo',
+            });
         }
     });
 })

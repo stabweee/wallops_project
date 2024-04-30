@@ -586,10 +586,6 @@ video {
   display: flex;
 }
 
-.grid{
-  display: grid;
-}
-
 .h-24{
   height: 6rem;
 }
@@ -601,6 +597,10 @@ video {
 .h-fit{
   height: -moz-fit-content;
   height: fit-content;
+}
+
+.h-screen{
+  height: 100vh;
 }
 
 .w-5{
@@ -723,12 +723,12 @@ video {
   background-size: cover;
   background-attachment: fixed;
   background-image: URL("img/home-bg.jpg");
-  height:110vh;
+  height:100vh;
+  z-index: 0;
 }
 
 .slide{
   display: flex;
-  width: 100vw;
   align-items: center;
   justify-content: flex-end;
   border-width: 1px;
@@ -737,13 +737,16 @@ video {
   --tw-bg-opacity: 1;
   background-color: rgb(241 245 249 / var(--tw-bg-opacity));
   z-index: 100;
-  height: 150vh;
+  width: 100vw;
+  height: 100vh;
 }
 
 .slide-text-div{
   display: flex;
   width: 50%;
+  align-items: center;
   justify-content: center;
+  height: 40vw;
 }
 
 .slide-text{
@@ -948,11 +951,5 @@ video {
   .lg\:text-8xl{
     font-size: 6rem;
     line-height: 1;
-  }
-}
-
-@media (min-width: 1280px){
-  .xl\:grid-cols-2{
-    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
