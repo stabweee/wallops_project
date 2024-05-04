@@ -15,23 +15,6 @@ gsap.from(".char", {
     opacity: 0,
 });
 
-// const body = document.getElementById('body');
-// const slides = gsap.utils.toArray('.slide')
-// slides.forEach((slide) => {
-//     var tl = gsap.timeline();
-//     tl.to(body, {
-//         y: -window.innerHeight,
-//         scrollTrigger: {
-//             trigger: slide,
-//             start: "top bottom",
-//             end: "top 85%",
-//             scrub: true,
-//             markers: true,
-//         }
-//     });
-// });
-
-
 const body = document.getElementById('body');
 const slides = gsap.utils.toArray('.slide');
 document.querySelector('.hero').addEventListener('click', function() {

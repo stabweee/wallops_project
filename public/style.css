@@ -628,6 +628,10 @@ video {
   justify-content: center;
 }
 
+.rounded{
+  border-radius: 0.25rem;
+}
+
 .border-4{
   border-width: 4px;
 }
@@ -646,8 +650,8 @@ video {
   background-color: rgb(226 232 240 / var(--tw-bg-opacity));
 }
 
-.p-32{
-  padding: 8rem;
+.p-2{
+  padding: 0.5rem;
 }
 
 .p-4{
@@ -666,6 +670,10 @@ video {
 .py-20{
   padding-top: 5rem;
   padding-bottom: 5rem;
+}
+
+.pt-16{
+  padding-top: 4rem;
 }
 
 .font-body{
@@ -845,6 +853,15 @@ video {
   --tw-scale-x: 1.1;
   --tw-scale-y: 1.1;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.description{
+  margin-bottom: 2rem;
+  border-width: 1px;
+  padding: 2rem;
+  text-align: center;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
 }
 
 .gallery{
